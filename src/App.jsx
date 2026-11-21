@@ -5,8 +5,9 @@ import Marquee from './components/Marquee'
 import Projects from './components/Projects'
 import Skills from './components/Skills'
 import About from './components/About'
-import Services from './components/Services'
+// import Services from './components/Services'
 import Contact from './components/Contact'
+import Capabilities from './components/Capabilities'
 
 export default function App() {
   // Tool yang dipilih di "My toolbox" menyorot project terkait di "Selected work".
@@ -21,7 +22,8 @@ export default function App() {
         <Projects activeTool={activeTool} onClear={() => setActiveTool(null)} />
         <Skills activeTool={activeTool} onPick={setActiveTool} />
         <About />
-        <Services />
+        {/* <Services /> */}
+        <Capabilities />
       </main>
       <Contact />
     </>

@@ -21,9 +21,9 @@ export const profile = {
   photo: '/photo.jpeg',
 
   links: {
-    upwork: 'https://www.upwork.com/freelancers/~your-profile-id',
-    github: 'https://github.com/your-username',
-    linkedin: 'https://www.linkedin.com/in/your-username',
+    upwork: 'https://www.upwork.com/freelancers/~01ac9219818a2bb170',
+    github: 'https://github.com/alfajrin653',
+    linkedin: 'https://www.linkedin.com/in/al-fajrin-621145266/',
   },
 }
 
@@ -207,35 +207,75 @@ export const projects = [
 
 ]
 
-export const services = [
+// export const services = [
+//   {
+//     title: 'Landing pages that convert',
+//     text: 'One focused page with a clear offer, smooth motion, and a form or button that gets used.',
+//     price: 'From $300',
+//     time: '1 week',
+//     color: 'bg-blue text-white',
+//   },
+//   {
+//     title: 'Web apps in React',
+//     text: 'Dashboards, booking tools, and client portals. Clean components, connected to your API.',
+//     price: 'From $900',
+//     time: '3 to 4 weeks',
+//     color: 'bg-pink',
+//   },
+//   {
+//     title: 'Fix and polish your site',
+//     text: 'Slow, broken on mobile, or just dated? I audit it, fix what matters, and give you a short report.',
+//     price: 'From $150',
+//     time: '2 to 3 days',
+//     color: 'bg-mint',
+//   },
+// ]
+
+// export const process = [
+//   { title: 'Brief', text: 'You tell me the goal. I reply within a day with questions and a fixed quote.' },
+//   { title: 'Build', text: 'You see a live preview link every few days, not one big reveal at the end.' },
+//   { title: 'Ship', text: 'I deploy it, hand over the code, and fix bugs free for 14 days.' },
+// ]
+
+export const process = [
   {
-    title: 'Landing pages that convert',
-    text: 'One focused page with a clear offer, smooth motion, and a form or button that gets used.',
-    price: 'From $300',
-    time: '1 week',
-    color: 'bg-blue text-white',
+    title: 'Understand',
+    text: 'I start by understanding the goal, users, requirements, and technical constraints of the project.',
   },
   {
-    title: 'Web apps in React',
-    text: 'Dashboards, booking tools, and client portals. Clean components, connected to your API.',
-    price: 'From $900',
-    time: '3 to 4 weeks',
+    title: 'Build',
+    text: 'I turn the idea or design into a working interface, connecting it with APIs and backend services when needed.',
+  },
+  {
+    title: 'Refine',
+    text: 'I test the result, improve responsiveness and usability, and refine the details before delivery.',
+  },
+]
+
+
+export const capabilities = [
+  {
+    title: 'Frontend Development',
+    text: 'Building responsive and interactive web interfaces with modern frontend technologies, from landing pages to complex web applications.',
+    tags: ['React.js', 'JavaScript', 'Tailwind CSS'],
+    color: 'bg-blue text-black',
+  },
+  {
+    title: 'Full-Stack Development',
+    text: 'Developing complete web applications with frontend, backend APIs, authentication, databases, and business logic.',
+    tags: ['Node.js', 'REST API', 'MySQL', 'PostgreSQL'],
     color: 'bg-pink',
   },
   {
-    title: 'Fix and polish your site',
-    text: 'Slow, broken on mobile, or just dated? I audit it, fix what matters, and give you a short report.',
-    price: 'From $150',
-    time: '2 to 3 days',
+    title: 'UI Implementation',
+    text: 'Turning designs and ideas into polished, responsive interfaces with attention to usability, interaction, and performance.',
+    tags: ['Responsive Design', 'Figma', 'UI Development'],
     color: 'bg-mint',
   },
 ]
 
-export const process = [
-  { title: 'Brief', text: 'You tell me the goal. I reply within a day with questions and a fixed quote.' },
-  { title: 'Build', text: 'You see a live preview link every few days, not one big reveal at the end.' },
-  { title: 'Ship', text: 'I deploy it, hand over the code, and fix bugs free for 14 days.' },
-]
+
+
 
 export const about = {
   paragraphs: [
