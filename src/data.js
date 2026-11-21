@@ -9,6 +9,8 @@ export const profile = {
   role: 'Frontend developer',
   email: 'alfazrin653@gmail.com',
   location: 'Jakarta, Indonesia',
+    phone: '+62 8577 6937 622',
+  whatsapp: '+62 8577 6937 622',
   timezone: 'UTC+7',
   availability: 'Available for new projects',
 

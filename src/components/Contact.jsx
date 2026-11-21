@@ -1,74 +1,88 @@
-import { useState } from 'react'
 import { profile } from '../data'
 
 export default function Contact() {
-  const [copied, setCopied] = useState(false)
-
-  const copy = async () => {
-    try {
-      await navigator.clipboard.writeText(profile.email)
-      setCopied(true)
-      setTimeout(() => setCopied(false), 2200)
-    } catch {
-      window.location.href = `mailto:${profile.email}`
-    }
-  }
-
   return (
-    <section id="contact" className="bg-blue text-white">
+    <section
+      id="contact"
+      className="border-t-[3px] border-black bg-blue text-white"
+    >
       <div className="mx-auto max-w-6xl px-5 py-20 md:py-28">
-        <h2 className="max-w-4xl text-[clamp(3rem,8vw,7rem)] font-extrabold leading-[0.95] tracking-[-0.035em]">
-          Got a project in mind? Let's talk.
-        </h2>
+        <div className="grid gap-12 md:grid-cols-2">
+          
+          <div>
+            <p className="text-lg font-bold uppercase tracking-wide">
+              Get in touch
+            </p>
 
-        <div className="mt-12 flex flex-wrap gap-4">
-          <a href={profile.links.upwork} target="_blank" rel="noreferrer" className="btn !bg-lemon">
-            Hire me on Upwork
-          </a>
-          <button type="button" onClick={copy} className="btn">
-            Copy my email
-          </button>
-        </div>
+            <h2 className="mt-4 text-5xl font-extrabold leading-none tracking-[-0.03em] md:text-7xl">
+              Let's build something.
+            </h2>
 
-        <p className="mt-6 text-xl">
-          Or write to{' '}
-          <a href={`mailto:${profile.email}`} className="font-bold underline underline-offset-4">
-            {profile.email}
-          </a>
-        </p>
+            <p className="mt-6 max-w-xl text-lg leading-relaxed text-white/70">
+              Have a project, idea, or opportunity? Feel free to reach out.
+              I'm open to freelance projects and new opportunities.
+            </p>
+          </div>
 
-        <footer className="mt-20 flex flex-wrap items-center justify-between gap-4 border-t-[3px] border-white pt-6 text-lg">
-          <p>
-            {profile.name}, {profile.location} ({profile.timezone})
-          </p>
-          <ul className="flex gap-6 font-bold">
-            <li>
-              <a href={profile.links.github} target="_blank" rel="noreferrer" className="underline underline-offset-4">
-                GitHub
-              </a>
-            </li>
-            <li>
-              <a href={profile.links.linkedin} target="_blank" rel="noreferrer" className="underline underline-offset-4">
+          <div className="flex flex-col justify-center gap-5">
+            
+            <a
+              href={`mailto:${profile.email}`}
+              className="group border-b-2 border-white/30 pb-4 text-xl font-bold transition hover:border-white"
+            >
+              <span className="text-sm font-medium text-white/50">
+                Email
+              </span>
+              <span className="mt-1 block">
+                {profile.email}
+              </span>
+            </a>
+
+            <a
+              href={`https://wa.me/${profile.whatsapp.replace(/\D/g, '')}`}
+              target="_blank"
+              rel="noreferrer"
+              className="group border-b-2 border-white/30 pb-4 text-xl font-bold transition hover:border-white"
+            >
+              <span className="text-sm font-medium text-white/50">
+                WhatsApp
+              </span>
+              <span className="mt-1 block">
+                {profile.phone}
+              </span>
+            </a>
+
+            <a
+              href={profile.links.linkedin}
+              target="_blank"
+              rel="noreferrer"
+              className="group border-b-2 border-white/30 pb-4 text-xl font-bold transition hover:border-white"
+            >
+              <span className="text-sm font-medium text-white/50">
                 LinkedIn
-              </a>
-            </li>
-            <li>
-              <a href={profile.links.upwork} target="_blank" rel="noreferrer" className="underline underline-offset-4">
-                Upwork
-              </a>
-            </li>
-          </ul>
-        </footer>
-      </div>
+              </span>
+              <span className="mt-1 block">
+                LinkedIn Profile →
+              </span>
+            </a>
 
-      {copied && (
-        <div
-          role="status"
-          className="toast fixed bottom-6 left-1/2 z-50 rounded-full border-[3px] border-black bg-mint px-6 py-3 text-lg font-bold text-black shadow-[4px_4px_0_#000]"
-        >
-          Email copied
+            <a
+              href={profile.links.github}
+              target="_blank"
+              rel="noreferrer"
+              className="group border-b-2 border-white/30 pb-4 text-xl font-bold transition hover:border-white"
+            >
+              <span className="text-sm font-medium text-white/50">
+                GitHub
+              </span>
+              <span className="mt-1 block">
+                GitHub Profile →
+              </span>
+            </a>
+
+          </div>
         </div>
-      )}
+      </div>
     </section>
   )
 }
